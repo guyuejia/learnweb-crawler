@@ -3,7 +3,7 @@
 """
 from selenium import webdriver
 browser = webdriver.Chrome("D:\\test\\chromedriver.exe")
-browser.get("C:\\Users\\HU\\PycharmProjects\\learnweb-crawler\\xpath\\xpath.html")
+browser.get("C:\\Users\\HU\PycharmProjects\\learnweb-crawler\\resource\\example.html")
 
 #选取所有包括lang属性的title节点
 browser.find_elements_by_xpath("//title[@lang]")

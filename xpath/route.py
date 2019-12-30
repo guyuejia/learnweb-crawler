@@ -3,7 +3,7 @@
 """
 from selenium import webdriver
 browser = webdriver.Chrome("D:\\test\\chromedriver.exe")
-browser.get("C:\\Users\\HU\PycharmProjects\\learnweb-crawler\\resource\\xpath.html")
+browser.get("C:\\Users\\HU\PycharmProjects\\learnweb-crawler\\resource\\example.html")
 
 #原始网页bookstore为根节点，但实际用chrome打开的网页，会自动前面添加两级节点html和body，所以bokkstore不再是根节点
 
