@@ -11,11 +11,12 @@ browser = webdriver.Chrome("D:\\test\\chromedriver.exe")
 browser.set_page_load_timeout(20)
 browser.set_script_timeout(20)
 try:
-    browser.get("https://www.javbus.com/SDDE-606")
+    browser.get("https://movie.douban.com/subject/26266893/")
 except TimeoutException:
     print("加载过慢")
     browser.execute_script('window.stop()')
 
-path="/html/body/div[5]/div[1]/div[2]/p[11]/span[1]/a"
+path="/html/body/div[5]/div[1]/div[2]/p[11]"
+#/html/body/div[5]/div[1]/div[2]/p[10]/span/a
 actorName=browser.find_element_by_xpath(path)
 print(actorName.text)
