@@ -1,6 +1,9 @@
+"""
+介绍通过路径来获取元素的基本用法
+"""
 from selenium import webdriver
 browser = webdriver.Chrome("D:\\test\\chromedriver.exe")
-browser.get("C:\\Users\\HU\\PycharmProjects\\learnweb-crawler\\xpath\\xpath.html")
+browser.get("C:\\Users\\HU\PycharmProjects\\learnweb-crawler\\resource\\xpath.html")
 
 #原始网页bookstore为根节点，但实际用chrome打开的网页，会自动前面添加两级节点html和body，所以bokkstore不再是根节点
 
@@ -26,6 +29,9 @@ prices=browser.find_elements_by_xpath("//book/price")
 directSons=browser.find_elements_by_xpath("//bookstore/*")
 #通配符写法：找到所有bookstore元素的所有子元素，len(allSons)的结果是6
 allSons=browser.find_elements_by_xpath("//bookstore//*")
+
+#多个路径写法：选取 book 元素的所有 title 和 price 元素,len的结果是4。
+browser.find_elements_by_xpath("//book/title | //book/price")
 
 
 #统计页面中book元素的数量，注意是elements不是element
