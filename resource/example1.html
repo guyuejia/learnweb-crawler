@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xpath样例网页1</title>
+</head>
+<body>
+<div id="A">
+    <!--父节点定位子节点-->
+    <div id="B">
+        <div>parent to child1</div>
+        <div>parent to child2</div>
+    </div>
+</div>
+
+<div id="E">
+    <!--子节点C定位父节点-->
+    <div>
+        <div>child to parent
+            <div>
+                <div id="C"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <!--下面两个节点用于兄弟节点定位-->
+    <div>brother 1</div>
+    <div id="D"></div>
+    <div>brother 2</div>
+</div>
+
+</body>
+</html>
