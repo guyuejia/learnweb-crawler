@@ -1,3 +1,4 @@
+#展示常用的函数的用法
 from selenium import webdriver
 option = webdriver.ChromeOptions()
 browser = webdriver.Chrome("D:\\test\\chromedriver.exe",options=option)
