@@ -1,6 +1,9 @@
 """
 加载页面过大的网页，时间过长，但是想要的元素有时候已经出来了，没有必要等到完全加载完
-可以通过设置一个超时时长，来避免页面一直加载
+可以通过设置一个超时时长，来避免页面一直加载。
+但这种方法目前有个问题，当加载时长超过设定的时间后，程序执行进入except分支，执行的js脚本会不生效。
+因此当超过set_script_timeout设置的时间后，程序还是会报错，导致后面的程序无法继续执行。
+因此目前这种设置方法是不生效的！！！
 """
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
