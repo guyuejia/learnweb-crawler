@@ -20,14 +20,22 @@ browser = webdriver.Chrome(r"D:\OneDrive\Programe Projects\Python\browserDriver\
 
 #隐式设定最大等待查找某个元素的时间，这个设置是针对browser的，全局有效
 #browser.implicitly_wait(10)
+
+"""
+WebDriverWait()会配合until()和until_not()方法一起使用，
+根据判断条件而进行灵活进行处理时间等待问题，他会不断的根据你设定的条件去判断，直到超过你设置的等待时间，
+如果设置的条件满足，然后进行下一步操作，
+如果没有满足会报一个'selenium.common.exceptions.TimeoutException: Message: '错误，
+"""
 webDriverWait = WebDriverWait(browser,10)
 browser.get("https://movie.douban.com/subject/26266893/")
 
 path = "//*[@id='content']/h1/span[1]"
+
+#通过显示的方法，until 也属于WebDriverWait,代表一直等待,直到某元素可见，until_not与其相反，判断某个元素直到不存在
 try:
     print(datetime.now())
     webDriverWait.until(EC.presence_of_all_elements_located((By.XPATH,path)))
-#/html/body/div[5]/div[1]/div[2]/p[10]/span/a
 finally:
     movieName=browser.find_element_by_xpath(path)
     print(movieName.text)
