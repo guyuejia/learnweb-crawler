@@ -5,7 +5,7 @@
 @License :   (C)Copyright 2017-2018, Liugroup-NLPR-CASIA
 @Modify Time      @Author    @Version    @Desciption
 ------------      -------    --------    -----------
-2020/8/1 17:32   gujiayue      1.0         处理iframe
+2020/8/1 17:32   gujiayue      1.0         处理iframe的方法
 '''
 
 from selenium import webdriver
