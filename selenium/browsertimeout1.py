@@ -9,7 +9,7 @@ from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 
 #注意，一定要chrome浏览器的版本和驱动程序的版本要对应，否则就会出现异常
-browser = webdriver.Chrome("D:\\test\\chromedriver.exe")
+browser = webdriver.Chrome("../browserdriver/chromedriver.exe")
 #设置页面加载和脚本执行超时时间
 browser.set_page_load_timeout(20)
 browser.set_script_timeout(20)
