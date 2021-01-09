@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 #默认get方法是必须等待加载完才会执行后续的代码
-# 通过设置get直接返回，不再等待界面加载完成
+# 通过设置get直接返回，不再等待界面加载完成，该设置必须在初始化浏览器之前完成
 desired_capabilities = DesiredCapabilities.CHROME
 desired_capabilities["pageLoadStrategy"] = "none"
 
